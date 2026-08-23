@@ -10,38 +10,30 @@
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Monitor Buddy home"><img class="brand-logo" src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><span>Monitor Buddy</span></a>
-  <nav><a href="#features">Features</a><a href="#compatibility">Compatibility</a><a href="#download">Download</a></nav>
+  <a class="brand" href="#top"><img class="brand-logo" src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><span>Monitor Buddy</span></a>
+  <nav><a href="#how">How it works</a><a href="#compatibility">Compatibility</a><a href="#download">Download</a></nav>
 </header>
 <main id="top">
 <section class="hero">
   <div class="hero-copy">
-    <p class="eyebrow">WINDOWS • DDC/CI</p>
+    <p class="eyebrow">WINDOWS • DDC/CI • FREE</p>
     <h1>One monitor.<br><span>Multiple devices.</span></h1>
-    <p class="lead">Switch your monitor input with a keyboard shortcut instead of reaching for the monitor buttons.</p>
-    <div class="actions"><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download Monitor Buddy</a><a class="button secondary" href="https://github.com/rs3166252/MonitorBuddy">View releases</a></div>
-    <p class="note">Free • Portable • Windows</p>
+    <p class="lead">Switch your monitor input with a keyboard shortcut. No monitor buttons, no extra display, no complicated workflow.</p>
+    <div class="actions"><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download latest release</a><a class="button secondary" href="https://github.com/rs3166252/MonitorBuddy">GitHub</a></div>
+    <p class="note">Portable Windows app • Setup included • Runs in the system tray</p>
   </div>
-  <div class="switch-card" aria-label="Example keyboard shortcuts">
-    <div class="monitor-top"><span>MONITOR BUDDY</span><span class="dot"></span></div>
-    <div class="logo-preview"><img src="assets/MonitorBuddy.svg" alt="Monitor Buddy mascot"></div>
+  <div class="switch-card">
+    <div class="card-head"><img src="assets/MonitorBuddy.svg" alt=""><div><strong>Monitor Buddy</strong><small>INPUT SWITCHER</small></div><span class="dot"></span></div>
     <div class="display"><div class="display-label">ACTIVE INPUT</div><strong>HDMI-1</strong><div class="shortcut">Ctrl + Alt + Shift + F2</div></div>
-    <div class="switch-row"><span>DisplayPort</span><kbd>F1</kbd></div>
-    <div class="switch-row active"><span>HDMI-1</span><kbd>F2</kbd></div>
+    <div class="switch-row"><span>DisplayPort</span><kbd>Ctrl + Alt + Shift + F1</kbd></div>
+    <div class="switch-row active"><span>HDMI-1</span><kbd>Ctrl + Alt + Shift + F2</kbd></div>
   </div>
 </section>
-<section class="problem"><p class="eyebrow">THE SIMPLE PROBLEM</p><h2>Stop pressing monitor buttons.</h2><p>If your PC and console share one screen, changing inputs can mean opening the monitor menu every time. Monitor Buddy turns that routine into a shortcut.</p></section>
-<section id="features" class="section"><p class="eyebrow">FEATURES</p><h2>Built for a clean setup.</h2><div class="grid">
-<article><b>⚡ Keyboard shortcuts</b><p>Map inputs to configurable F1–F9 combinations for quick switching.</p></article>
-<article><b>🖥️ Monitor profiles</b><p>Keep input mappings for your connected monitors and choose the active profile.</p></article>
-<article><b>🔎 Input scanning</b><p>Scan the monitor for available input controls instead of relying on one hard-coded layout.</p></article>
-<article><b>🤖 System tray</b><p>Run quietly in the tray and bring up settings whenever you need them.</p></article>
-<article><b>📦 Portable</b><p>Extract the release, complete setup once, and use the application without a traditional installer.</p></article>
-<article><b>🛠️ Easy setup</b><p>Automatic dependency setup is provided, with a manual selection fallback when needed.</p></article>
-</div></section>
-<section id="compatibility" class="compat"><div><p class="eyebrow">COMPATIBILITY</p><h2>DDC/CI is the key.</h2><p>Monitor Buddy is designed for compatible external monitors that expose input switching through DDC/CI. Actual compatibility depends on the monitor firmware, connection path, GPU/driver behavior, and the controls exposed by the display.</p></div><div class="compat-box"><strong>Before you download</strong><p>Check that your monitor supports DDC/CI and that its input source can be controlled through the display connection.</p></div></section>
-<section id="download" class="download"><p class="eyebrow">READY?</p><h2>Give your monitor a shortcut.</h2><p>Download the latest stable release from GitHub.</p><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download latest release</a></section>
+<section id="how" class="quick"><div><b>1. Connect your devices</b><span>PC, console, or other sources to the same monitor.</span></div><div><b>2. Run setup</b><span>Monitor Buddy detects displays and prepares the configuration.</span></div><div><b>3. Press a shortcut</b><span>Switch inputs instantly from Windows.</span></div></section>
+<section class="info"><div><p class="eyebrow">WHY MONITOR BUDDY?</p><h2>Made for the one-screen setup.</h2><p>Perfect when one monitor is shared between a PC and a console, or between several devices. Instead of opening the monitor's physical menu every time, use a keyboard shortcut.</p></div><div class="feature-list"><div><b>⚡ Fast switching</b><span>Configurable F1–F9 shortcut combinations.</span></div><div><b>🖥️ Monitor profiles</b><span>Save input mappings for connected monitors.</span></div><div><b>🔎 Input scanning</b><span>Discover available DDC/CI input values.</span></div><div><b>📦 Simple release</b><span>Extract, run setup, and start Monitor Buddy.</span></div></div></section>
+<section id="compatibility" class="compat"><div><p class="eyebrow">COMPATIBILITY</p><h2>DDC/CI is required.</h2><p>Monitor Buddy controls input switching through DDC/CI. Compatibility depends on the monitor firmware, connection path, GPU/driver behavior, and which controls the display exposes.</p></div><div class="compat-box"><b>Before installing</b><ul><li>Windows PC</li><li>External monitor with DDC/CI support</li><li>Input switching exposed through DDC/CI</li></ul><small>If automatic setup cannot identify the correct control, the setup flow provides a manual selection fallback.</small></div></section>
+<section id="download" class="download"><div><img src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><div><p class="eyebrow">READY TO TRY IT?</p><h2>Give your monitor a shortcut.</h2><p>Download the latest stable release from GitHub and run the included setup.</p></div></div><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download Monitor Buddy</a></section>
 </main>
-<footer><span class="footer-brand"><img src="assets/MonitorBuddy.svg" alt=""> <span>Monitor Buddy</span></span><span>Windows • DDC/CI</span><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a></footer>
+<footer><span class="footer-brand"><img src="assets/MonitorBuddy.svg" alt=""> <b>Monitor Buddy</b></span><span>Windows • DDC/CI</span><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a></footer>
 </body>
 </html>

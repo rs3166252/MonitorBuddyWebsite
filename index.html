@@ -11,7 +11,7 @@
 <body>
 <header class="nav">
   <a class="brand" href="#top"><img class="brand-logo" src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><span>Monitor Buddy</span></a>
-  <nav><a href="#how">How it works</a><a href="#support">Support</a><a href="#download">Download</a></nav>
+  <nav><a href="#how">How it works</a><a href="#story">Our story</a><a href="#support">Support</a><a href="#download">Download</a></nav>
 </header>
 <main id="top">
 <section class="hero">
@@ -19,7 +19,7 @@
     <p class="eyebrow">WINDOWS • DDC/CI • FREE</p>
     <h1>One monitor.<br><span>Multiple devices.</span></h1>
     <p class="lead">Switch your monitor input with a keyboard shortcut. No monitor buttons, no extra display, no complicated workflow.</p>
-    <div class="actions"><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download latest release</a><a class="button secondary" href="https://discord.gg/Y6EUwnwsNK">Join Discord</a></div>
+    <div class="actions"><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download latest release</a><a class="button secondary" href="https://discord.cstrikerdj.in">Join Discord</a></div>
     <p class="note">Portable Windows app • Setup included • Runs in the system tray</p>
   </div>
   <div class="switch-card">
@@ -32,9 +32,33 @@
 <section id="how" class="quick"><div><b>1. Connect your devices</b><span>PC, console, or other sources to the same monitor.</span></div><div><b>2. Run setup</b><span>Monitor Buddy detects displays and prepares the configuration.</span></div><div><b>3. Press a shortcut</b><span>Switch inputs instantly from Windows.</span></div></section>
 <section class="info"><div><p class="eyebrow">WHY MONITOR BUDDY?</p><h2>Made for the one-screen setup.</h2><p>Perfect when one monitor is shared between a PC and a console, or between several devices. Instead of opening the monitor's physical menu every time, use a keyboard shortcut.</p></div><div class="feature-list"><div><b>⚡ Fast switching</b><span>Configurable F1–F9 shortcut combinations.</span></div><div><b>🖥️ Monitor profiles</b><span>Save input mappings for connected monitors.</span></div><div><b>🔎 Input scanning</b><span>Discover available DDC/CI input values.</span></div><div><b>📦 Simple release</b><span>Extract, run setup, and start Monitor Buddy.</span></div></div></section>
 <section id="compatibility" class="compat"><div><p class="eyebrow">COMPATIBILITY</p><h2>DDC/CI is required.</h2><p>Monitor Buddy controls input switching through DDC/CI. Compatibility depends on the monitor firmware, connection path, GPU/driver behavior, and which controls the display exposes.</p></div><div class="compat-box"><b>Before installing</b><ul><li>Windows PC</li><li>External monitor with DDC/CI support</li><li>Input switching exposed through DDC/CI</li></ul><small>If automatic setup cannot identify the correct control, the setup flow provides a manual selection fallback.</small></div></section>
-<section id="support" class="support"><p class="eyebrow">NEED HELP?</p><h2>We've got you covered.</h2><div class="support-grid"><a href="https://discord.gg/Y6EUwnwsNK"><b>💬 Discord</b><span>Ask questions, get setup help, and talk with the community.</span></a><div><b>🎥 YouTube</b><span>The official how-to video is coming soon. Once published, it will be linked here.</span></div><a href="https://github.com/rs3166252/MonitorBuddy/issues"><b>🐛 GitHub Issues</b><span>Found a reproducible bug? Report it here with useful system details.</span></a></div></section>
+<section id="story" class="story">
+  <div class="story-inner">
+    <p class="eyebrow">THE STORY BEHIND MONITOR BUDDY</p>
+    <h2>Built because we needed it. Shared because someone else might need it too.</h2>
+    <p>Monitor Buddy started with a problem we were actually struggling with: switching between a PC, PS5, and other devices on one monitor without constantly reaching for the monitor controls.</p>
+    <p>We searched for a solution. We heard about monitor-control software, but our monitor did not provide the feature we needed, and we were left looking for a way to do it without expensive hardware.</p>
+    <p>During that search we found the YouTube video <strong>“Tech Tip: Switch Monitor Input with a Keyboard Shortcut.”</strong> We only needed a few seconds of information from it: ControlMyMonitor, commands, and the idea of using keyboard shortcuts. Then came the question: <strong>“What if we took those two things to the next level?”</strong></p>
+    <p>We started building our own solution. The early experiments moved through Python, C#, and PowerShell. We connected pieces, tested them, broke things, fixed them, and kept going until Monitor Buddy became a real application that worked for our setup.</p>
+    <p>And then came the obvious question: <strong>why keep it just for ourselves?</strong> Other people have one-screen setups, PCs and consoles, and hardware they cannot or do not want to replace. So we decided to make Monitor Buddy free, with optional community support in the future if people want to help development continue.</p>
+    <p>The development process was not magic. It was build → test → break → investigate → fix → test again. And yes, there was an AI sitting next to us confidently suggesting things that sometimes broke the exact thing we had just fixed. 😂</p>
+    <div class="story-credit">
+      <h3>🙏 Where the idea started</h3>
+      <p>A special thank-you to the creator of <strong>“Tech Tip: Switch Monitor Input with a Keyboard Shortcut.”</strong> The video introduced us to ControlMyMonitor and the command-based approach that helped us start exploring this problem.</p>
+      <p>The video gave us a direction. <strong>Monitor Buddy is our own independent implementation and project.</strong></p>
+      <a class="button secondary" href="https://www.youtube.com/watch?v=ue2dijq7wdM">Watch the original inspiration video</a>
+    </div>
+    <div class="story-credit">
+      <h3>🔗 Independent project</h3>
+      <p>Monitor Buddy is an independent CStrikerDJ project. The development, testing, design, maintenance, and decisions behind Monitor Buddy are our own.</p>
+      <p>People, videos, tools, and projects mentioned here are credited for inspiration or technical reference where applicable. They are not affiliated with, responsible for, or associated with the development of Monitor Buddy.</p>
+    </div>
+    <p class="story-final"><strong>Someone showed us the direction. We decided to see how far we could take it.</strong></p>
+  </div>
+</section>
+<section id="support" class="support"><p class="eyebrow">NEED HELP?</p><h2>We've got you covered.</h2><div class="support-grid"><a href="https://discord.cstrikerdj.in"><b>💬 Discord</b><span>Ask questions, get setup help, and talk with the community.</span></a><div><b>🎥 YouTube</b><span>The official how-to video is coming soon. Once published, it will be linked here.</span></div><a href="https://github.com/rs3166252/MonitorBuddy/issues"><b>🐛 GitHub Issues</b><span>Found a reproducible bug? Report it here with useful system details.</span></a></div></section>
 <section id="download" class="download"><div><img src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><div><p class="eyebrow">READY TO TRY IT?</p><h2>Give your monitor a shortcut.</h2><p>Download the latest stable release from GitHub and run the included setup.</p></div></div><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download Monitor Buddy</a></section>
 </main>
-<footer><span class="footer-brand"><img src="assets/MonitorBuddy.svg" alt=""> <b>Monitor Buddy</b></span><span>Windows • DDC/CI</span><span><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a> · <a href="https://discord.gg/Y6EUwnwsNK">Discord</a></span></footer>
+<footer><span class="footer-brand"><img src="assets/MonitorBuddy.svg" alt=""> <b>Monitor Buddy</b></span><span>Windows • DDC/CI</span><span><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a> · <a href="https://discord.cstrikerdj.in">Discord</a></span></footer>
 </body>
 </html>

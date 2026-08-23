@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Monitor Buddy — switch compatible monitor inputs with keyboard shortcuts using DDC/CI.">
 <title>Monitor Buddy — One Monitor. Multiple Devices.</title>
+<link rel="icon" href="assets/MonitorBuddy.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="nav">
-  <a class="brand" href="#top" aria-label="Monitor Buddy home"><span class="brand-mark">🤖</span><span>Monitor Buddy</span></a>
+  <a class="brand" href="#top" aria-label="Monitor Buddy home"><img class="brand-logo" src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><span>Monitor Buddy</span></a>
   <nav><a href="#features">Features</a><a href="#compatibility">Compatibility</a><a href="#download">Download</a></nav>
 </header>
 <main id="top">
@@ -23,6 +24,7 @@
   </div>
   <div class="switch-card" aria-label="Example keyboard shortcuts">
     <div class="monitor-top"><span>MONITOR BUDDY</span><span class="dot"></span></div>
+    <div class="logo-preview"><img src="assets/MonitorBuddy.svg" alt="Monitor Buddy mascot"></div>
     <div class="display"><div class="display-label">ACTIVE INPUT</div><strong>HDMI-1</strong><div class="shortcut">Ctrl + Alt + Shift + F2</div></div>
     <div class="switch-row"><span>DisplayPort</span><kbd>F1</kbd></div>
     <div class="switch-row active"><span>HDMI-1</span><kbd>F2</kbd></div>
@@ -40,6 +42,6 @@
 <section id="compatibility" class="compat"><div><p class="eyebrow">COMPATIBILITY</p><h2>DDC/CI is the key.</h2><p>Monitor Buddy is designed for compatible external monitors that expose input switching through DDC/CI. Actual compatibility depends on the monitor firmware, connection path, GPU/driver behavior, and the controls exposed by the display.</p></div><div class="compat-box"><strong>Before you download</strong><p>Check that your monitor supports DDC/CI and that its input source can be controlled through the display connection.</p></div></section>
 <section id="download" class="download"><p class="eyebrow">READY?</p><h2>Give your monitor a shortcut.</h2><p>Download the latest stable release from GitHub.</p><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download latest release</a></section>
 </main>
-<footer><span>🤖 Monitor Buddy</span><span>Windows • DDC/CI</span><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a></footer>
+<footer><span class="footer-brand"><img src="assets/MonitorBuddy.svg" alt=""> <span>Monitor Buddy</span></span><span>Windows • DDC/CI</span><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a></footer>
 </body>
 </html>

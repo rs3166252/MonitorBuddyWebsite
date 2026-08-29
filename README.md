@@ -41,3 +41,5 @@ Open `index.html` in a browser, or serve the repository directory with any stati
 ## 🙏 Credit & independence
 
 The website credits the original YouTube video that helped us discover the ControlMyMonitor/command-based approach. Monitor Buddy is an independent CStrikerDJ project and is not affiliated with the creator, video, or referenced tools.
+
+<!-- Cloudflare deployment integration test: this README change is intentionally harmless and exists to verify that pushes to main trigger the connected production deployment. -->

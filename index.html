@@ -9,178 +9,103 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- ==================== SITE NAVIGATION ==================== -->
+<!-- ============================================================
+     MONITOR BUDDY WEBSITE
+     Modern product landing page. Interactive story cards explain
+     how the project evolved and how the application works.
+     ============================================================ -->
+<div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+
+<!-- ==================== NAVIGATION ==================== -->
 <header class="nav">
-  <a class="brand" href="#top"><img class="brand-logo" src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><span>Monitor Buddy</span></a>
-  <nav><a href="#how">How it works</a><a href="#simple">Why it's simpler</a><a href="#story">Our story</a><a href="#support">Support</a><a href="#download">Download</a></nav>
+  <a class="brand" href="#top"><img src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><span><b>MONITOR BUDDY</b><small>One Shortcut. Total Control.</small></span></a>
+  <nav><a href="#how">How It Works</a><a href="#story">The Story</a><a href="#security">Security</a><a href="#download">Download</a></nav>
+  <a class="nav-download" href="https://github.com/rs3166252/MonitorBuddy/releases">↓ Download Now</a>
 </header>
 
 <main id="top">
 <!-- ==================== HERO ==================== -->
 <section class="hero">
-  <div class="hero-copy">
+  <div class="hero-copy reveal">
+    <div class="release-pill"><span class="pulse"></span> NEW v1.1.0 <em>Smarter. Lighter. Better.</em></div>
     <p class="eyebrow">WINDOWS • DDC/CI • FREE</p>
-    <h1>One monitor.<br><span>Multiple devices.</span></h1>
-    <p class="lead">Switch your monitor input with a keyboard shortcut. No monitor buttons, no extra display, no complicated workflow.</p>
-    <div class="actions"><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download latest release</a><a class="button secondary" href="https://discord.cstrikerdj.in">Join Discord</a></div>
-    <p class="note">Portable Windows app • Setup included • Runs in the system tray</p>
+    <h1>Switch Monitor<br>Inputs in <span>1 Click.</span></h1>
+    <p class="lead">A lightweight Windows utility that lets you switch compatible monitor inputs using DDC/CI and customizable keyboard shortcuts.</p>
+    <div class="hero-chips"><span>⚡ Instant Switch</span><span>⌁ No Internet</span><span>◌ Lightweight</span></div>
+    <div class="actions"><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">↓ Download Now</a><a class="button secondary" href="#how">▷ See How It Works</a></div>
+    <p class="security-note">♢ Safe. Secure. Verified.<br><strong>VirusTotal 0/64 Detections</strong></p>
   </div>
-  <div class="switch-card">
-    <div class="card-head"><img src="assets/MonitorBuddy.svg" alt=""><div><strong>Monitor Buddy</strong><small>INPUT SWITCHER</small></div><span class="dot"></span></div>
-    <div class="display"><div class="display-label">ACTIVE INPUT</div><strong>HDMI-1</strong><div class="shortcut">Ctrl + Alt + Shift + F2</div></div>
-    <div class="switch-row"><span>DisplayPort</span><kbd>Ctrl + Alt + Shift + F1</kbd></div>
-    <div class="switch-row active"><span>HDMI-1</span><kbd>Ctrl + Alt + Shift + F2</kbd></div>
+
+  <!-- Animated product mockup: the dots and input routes are CSS-driven. -->
+  <div class="hero-visual reveal delay-1" aria-label="Animated Monitor Buddy input switcher preview">
+    <div class="input-node node-green"><i>▣</i> HDMI 1</div><div class="input-node node-blue"><i>▣</i> HDMI 2</div><div class="input-node node-purple"><i>▣</i> DP 1</div><div class="input-node node-orange"><i>▣</i> DP 2</div>
+    <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div><div class="monitor-glow"></div>
+    <div class="monitor"><div class="monitor-screen"><small>MONITOR <b>BUDDY</b></small><label>ACTIVE INPUT</label><strong id="heroInput">HDMI 1</strong><div class="monitor-arrows"><span>‹</span><div class="input-dots"><i class="active"></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>›</span></div></div><div class="monitor-stand"></div><div class="monitor-base"></div></div><div class="keyboard"></div>
   </div>
 </section>
 
-<!-- ==================== QUICK START ==================== -->
-<section id="how" class="quick"><div><b>1. Connect your devices</b><span>PC, console, or other sources to the same monitor.</span></div><div><b>2. Run setup</b><span>Monitor Buddy detects displays and prepares the configuration.</span></div><div><b>3. Press a shortcut</b><span>Switch inputs instantly from Windows.</span></div></section>
+<!-- ==================== TRUST STRIP ==================== -->
+<section class="trust-strip reveal"><div><b>⚡ 1 Click</b><span>Instant Switching</span></div><div><b>▣ DDC/CI</b><span>Industry Standard</span></div><div><b>♢ 0/64</b><span>VirusTotal Score</span></div><div><b>♧ 100%</b><span>Offline &amp; Private</span></div><div><b>◌ ~2MB</b><span>Ultra Lightweight</span></div></section>
 
-<!-- ==================== WHY IT IS SIMPLER ==================== -->
-<section id="simple" class="simple-flow">
-  <div class="simple-head"><p class="eyebrow">WHY MONITOR BUDDY?</p><h2>We turned the manual process into a few clicks.</h2><p>The video that inspired us showed the building blocks: monitor commands, ControlMyMonitor, and keyboard shortcuts. We took that direction and built a dedicated tool around it.</p></div>
-  <div class="flow-grid">
-    <div><span class="flow-number">01</span><b>Download one release</b><span>No need to assemble a collection of separate setup steps.</span></div>
-    <div><span class="flow-number">02</span><b>Run Monitor Buddy</b><span>Setup is included and the application helps prepare the environment.</span></div>
-    <div><span class="flow-number">03</span><b>Detect & configure</b><span>Scan compatible monitors and configure inputs and shortcuts.</span></div>
-    <div><span class="flow-number">04</span><b>Press your shortcut</b><span>Switch between your devices from Windows when you need to.</span></div>
-  </div>
-  <div class="simple-quote"><strong>Before:</strong> find tools → download dependencies → configure commands → map inputs → maintain the setup.<br><strong>With Monitor Buddy:</strong> click → click → click → done.</div>
-</section>
+<!-- ==================== HOW IT WORKS ==================== -->
+<section id="how" class="how section-pad"><div class="section-heading reveal"><p class="eyebrow">SIMPLE &amp; POWERFUL</p><h2>How Monitor Buddy <span>Works</span></h2><p>Behind the scenes, simple. For you, effortless.</p></div><div class="how-grid">
+  <article class="how-card reveal"><div class="step-icon green">◎</div><small>01</small><h3>Detects Monitor</h3><p>Finds your DDC/CI-compatible monitor and available input controls.</p></article><div class="flow-line"><i></i></div>
+  <article class="how-card reveal delay-1"><div class="step-icon blue">⌨</div><small>02</small><h3>You Press Shortcut</h3><p>Your custom key combination triggers the input switch instantly.</p></article><div class="flow-line"><i></i></div>
+  <article class="how-card reveal delay-2"><div class="step-icon purple">⇄</div><small>03</small><h3>Sends DDC/CI Command</h3><p>Monitor Buddy sends the command needed to change the display input.</p></article><div class="flow-line"><i></i></div>
+  <article class="how-card reveal delay-3"><div class="step-icon orange">✓</div><small>04</small><h3>Input Switched</h3><p>Your monitor switches to the selected input. That's it.</p></article>
+</div></section>
+
+<!-- ==================== LIVE DEMO ==================== -->
+<section class="demo section-pad"><div class="demo-copy reveal"><p class="eyebrow">SEE THE IDEA</p><h2>From keyboard shortcut<br>to <span>new input.</span></h2><p>Monitor Buddy turns a monitor-control command into a workflow you can trigger from Windows. The visual below is a product illustration — your actual monitor and supported inputs determine what is available.</p><div class="demo-shortcut"><kbd>CTRL</kbd><b>+</b><kbd>ALT</kbd><b>+</b><kbd>SHIFT</kbd><b>+</b><kbd>F2</kbd><span>→</span><strong>HDMI 1</strong></div></div><div class="demo-console reveal delay-1"><div class="console-top"><span class="led"></span><b>MONITOR BUDDY</b><small>DDC/CI COMMAND</small></div><div class="console-body"><p>&gt; monitor detected</p><p>&gt; compatible input found</p><p>&gt; shortcut received: <b>CTRL + ALT + SHIFT + F2</b></p><p class="success">&gt; input switched ✓</p></div><div class="console-scan"></div></div></section>
 
 <!-- ==================== FEATURES ==================== -->
-<section class="info"><div><p class="eyebrow">MADE FOR THE ONE-SCREEN SETUP</p><h2>Less setup. More switching.</h2><p>Perfect when one monitor is shared between a PC and a console, or between several devices. Instead of opening the monitor's physical menu every time, use a keyboard shortcut.</p></div><div class="feature-list"><div><b>⚡ Fast switching</b><span>Configurable F1–F9 shortcut combinations.</span></div><div><b>🖥️ Monitor profiles</b><span>Save input mappings for connected monitors.</span></div><div><b>🔎 Input scanning</b><span>Discover available DDC/CI input values.</span></div><div><b>📦 Portable release</b><span>Setup and dependency assistance are included.</span></div></div></section>
+<section class="features section-pad"><div class="section-heading reveal"><p class="eyebrow">MADE FOR THE ONE-SCREEN SETUP</p><h2>Less setup.<br><span>More switching.</span></h2></div><div class="feature-grid"><article class="feature-card reveal"><b>⚡ Fast switching</b><p>Configurable keyboard shortcuts make changing inputs a simple action.</p></article><article class="feature-card reveal delay-1"><b>🖥 Monitor profiles</b><p>Keep input mappings organized for compatible displays.</p></article><article class="feature-card reveal delay-2"><b>🔎 Input scanning</b><p>Discover DDC/CI input values exposed by your monitor.</p></article><article class="feature-card reveal delay-3"><b>📦 Portable release</b><p>No traditional installer. Extract the release and run the app.</p></article></div></section>
+
+<!-- ==================== STORY TIMELINE ==================== -->
+<section id="story" class="story section-pad"><div class="section-heading reveal"><p class="eyebrow">THE JOURNEY</p><h2>The Monitor Buddy <span>Story</span></h2><p>From a simple problem to a dedicated tool built for real-world use.</p></div><div class="timeline">
+  <!-- Each node is clickable. The modal explains the chapter without navigating away. -->
+  <button class="story-node reveal" data-story="powershell"><span class="node-icon green">↻</span><b>PowerShell Days</b><small>It started small.</small><i>Click to explore</i></button><button class="story-node reveal delay-1" data-story="python"><span class="node-icon blue">&lt;/&gt;</span><b>Python Experiments</b><small>Making it smarter.</small><i>Click to explore</i></button><button class="story-node reveal delay-2" data-story="csharp"><span class="node-icon purple">C#</span><b>C# &amp; Early Builds</b><small>Becoming an app.</small><i>Click to explore</i></button><button class="story-node reveal delay-3" data-story="security"><span class="node-icon orange">♢</span><b>Security Rebuild</b><small>We wanted it cleaner.</small><i>Click to explore</i></button><button class="story-node reveal delay-4" data-story="release"><span class="node-icon green">MB</span><b>Monitor Buddy v1.1.0</b><small>The release we wanted.</small><i>Click to explore</i></button>
+</div><p class="story-hint">Each chapter opens a quick explanation of what happened.</p></section>
 
 <!-- ==================== COMPATIBILITY ==================== -->
-<section id="compatibility" class="compat"><div><p class="eyebrow">COMPATIBILITY</p><h2>DDC/CI is required.</h2><p>Monitor Buddy controls input switching through DDC/CI. Compatibility depends on the monitor firmware, connection path, GPU/driver behavior, and which controls the display exposes.</p></div><div class="compat-box"><b>Before installing</b><ul><li>Windows PC</li><li>External monitor with DDC/CI support</li><li>Input switching exposed through DDC/CI</li></ul><small>If automatic setup cannot identify the correct control, the setup flow provides a manual selection fallback.</small></div></section>
+<section class="compat section-pad"><div class="compat-copy reveal"><p class="eyebrow">COMPATIBILITY</p><h2>DDC/CI is the bridge.</h2><p>Monitor Buddy controls input switching through DDC/CI. Compatibility depends on your monitor firmware, connection path, GPU/driver behavior, and which controls your display exposes.</p></div><div class="compat-box reveal delay-1"><b>Before you try it</b><ul><li>Windows PC</li><li>External monitor with DDC/CI support</li><li>Input switching exposed through DDC/CI</li></ul><small>If automatic setup cannot identify the correct control, Monitor Buddy provides a manual selection fallback.</small></div></section>
 
-<!-- ==================== THE STORY ==================== -->
-<section id="story" class="story">
-  <div class="story-intro">
-    <p class="eyebrow">THE STORY BEHIND MONITOR BUDDY</p>
-    <h2>It started with a problem.<br><span>Then we decided to build the fix.</span></h2>
-    <p class="story-deck">Built because we needed it. Shared because someone else might need it too.</p>
-  </div>
-  <div class="story-timeline">
-    <!-- STORY 01: THE ORIGINAL PROBLEM -->
-    <article class="story-step">
-      <div class="story-marker">01</div>
-      <div class="story-card">
-        <p class="story-label">THE PROBLEM</p>
-        <h3>PC. PS5. One monitor.</h3>
-        <p>Monitor Buddy started with a problem we were actually struggling with: switching between a PC, PS5, and other devices on one monitor without constantly reaching for the monitor controls.</p>
-        <p>We wanted a software solution. Our monitor did not provide the feature we needed, and we did not want to buy expensive hardware just to make input switching easier.</p>
-      </div>
-    </article>
-
-    <!-- STORY 02: THE INSPIRATION -->
-    <article class="story-step">
-      <div class="story-marker">02</div>
-      <div class="story-card">
-        <p class="story-label">THE STARTING POINT</p>
-        <h3>Then we found a few seconds of a video.</h3>
-        <p>During that search we found the YouTube video <strong>“Tech Tip: Switch Monitor Input with a Keyboard Shortcut.”</strong> It introduced us to ControlMyMonitor, DDC/CI commands, and the idea of using keyboard shortcuts to control monitor functions from Windows.</p>
-        <blockquote>“What if we took those things to the next level?”</blockquote>
-      </div>
-    </article>
-
-    <!-- STORY 03: EXPERIMENTATION AND REBUILD -->
-    <article class="story-step">
-      <div class="story-marker">03</div>
-      <div class="story-card">
-        <p class="story-label">THE BUILD</p>
-        <h3>From experiments to a proper application.</h3>
-        <p>The first versions were experiments. We moved between <strong>PowerShell, Python, and C#</strong>, testing different ways to communicate with the monitor and turn the idea into something usable.</p>
-        <p>One of the early script-based versions worked, but it was not the release experience we wanted. Some security tools also flagged that early approach. That taught us an important lesson: making the feature work was only part of the job.</p>
-        <div class="build-path"><span>PowerShell</span><i>→</i><span>Python</span><i>→</i><span>C#</span><i>→</i><span>Monitor Buddy</span></div>
-        <p>We kept rebuilding, testing, investigating, fixing, and testing again until Monitor Buddy became a proper application rather than a collection of scripts and experiments.</p>
-      </div>
-    </article>
-
-    <!-- STORY 04: THE RELEASE WE COULD STAND BEHIND -->
-    <article class="story-step">
-      <div class="story-marker">04</div>
-      <div class="story-card story-card-highlight">
-        <p class="story-label">THE RELEASE</p>
-        <h3>A portable app we were comfortable putting in public.</h3>
-        <p>The <strong>v1.1.0 Actual App</strong> is the build we finally wanted to share: portable, simple to run, designed around monitor identification and DDC/CI control, with Windows startup support and a straightforward user experience.</p>
-        <p>No traditional installer is required. Extract the release ZIP, run the application, and use it.</p>
-        <p>We also checked the final public release with VirusTotal. The release ZIP received <strong>0 / 64 detections</strong> at the time of analysis.</p>
-        <a class="button secondary" href="https://www.virustotal.com/gui/file/8cfab64e6480f855f83a78f480902a9d2b9f030c6606b47297ee3ba5d3dfae34/detection">View VirusTotal scan results</a>
-      </div>
-    </article>
-
-    <!-- STORY 05: WHY WE RELEASED IT -->
-    <article class="story-step">
-      <div class="story-marker">05</div>
-      <div class="story-card">
-        <p class="story-label">WHY SHARE IT?</p>
-        <h3>Why keep it just for ourselves?</h3>
-        <p>Other people have one-screen setups, PCs and consoles, and hardware they cannot or do not want to replace.</p>
-        <p>So we decided to make Monitor Buddy free and publicly available, with optional community support in the future if people want to help development continue.</p>
-      </div>
-    </article>
-
-    <!-- STORY 06: THE REAL DEVELOPMENT PROCESS -->
-    <article class="story-step">
-      <div class="story-marker">06</div>
-      <div class="story-card story-card-ai">
-        <p class="story-label">THE REAL DEVELOPMENT PROCESS</p>
-        <h3>Build. Test. Break. Fix. Repeat. 😂</h3>
-        <p>The development process was not magic. It was build → test → break → investigate → fix → test again.</p>
-        <blockquote>“And yes, there was an AI sitting next to us confidently suggesting things that sometimes broke the exact thing we had just fixed.” 😂</blockquote>
-      </div>
-    </article>
-  </div>
-
-  <!-- ==================== CMM AND INSPIRATION CREDITS ==================== -->
-  <div class="story-bottom">
-    <div class="story-credit">
-      <p class="story-label">🙏 THANK YOU TO CONTROLMYMONITOR</p>
-      <h3>A technical foundation that made the experiment possible.</h3>
-      <p>Monitor Buddy would not have been possible without <strong>ControlMyMonitor (CMM)</strong> and the work behind it. CMM gave us a practical way to experiment with monitor settings and DDC/CI from Windows instead of having to build that entire foundation ourselves.</p>
-      <p>We genuinely respect the amount of engineering and experimentation behind a tool like CMM, especially because it is made available as freeware.</p>
-      <p>Monitor Buddy uses the CMM executable as part of its current implementation. We reviewed the official CMM distribution terms and chose to keep Monitor Buddy free rather than charge for a product that redistributes the freeware component.</p>
-      <p><strong>If someone can put that much work into making a powerful tool available for free, why shouldn't we do the same with what we built on top of it?</strong></p>
-      <p><a href="https://www.nirsoft.net/utils/control_my_monitor.html">Read the official ControlMyMonitor page and license</a></p>
-    </div>
-
-    <div class="story-credit">
-      <p class="story-label">🙏 WHERE THE IDEA STARTED</p>
-      <h3>Someone showed us the direction.</h3>
-      <p>A special thank-you to the creator of <strong>“Tech Tip: Switch Monitor Input with a Keyboard Shortcut.”</strong> The video introduced us to ControlMyMonitor and the command-based approach that helped us start exploring this problem.</p>
-      <p><strong>The video gave us a direction. Monitor Buddy is our own independent implementation and project.</strong></p>
-      <a class="button secondary" href="https://www.youtube.com/watch?v=ue2dijq7wdM">Watch the original inspiration video</a>
-    </div>
-
-    <!-- SECURITY: LINK TO THE EXACT PUBLIC ZIP SCAN -->
-    <div class="story-credit independent-card">
-      <p class="story-label">🛡️ RELEASE SECURITY</p>
-      <h3>Transparent about the build we published.</h3>
-      <p>The public <strong>MonitorBuddy-App.zip</strong> release was checked with VirusTotal and received <strong>0 / 64 detections</strong> at the time of analysis.</p>
-      <p><strong>SHA-256:</strong><br><code>8cfab64e6480f855f83a78f480902a9d2b9f030c6606b47297ee3ba5d3dfae34</code></p>
-      <a class="button secondary" href="https://www.virustotal.com/gui/file/8cfab64e6480f855f83a78f480902a9d2b9f030c6606b47297ee3ba5d3dfae34/detection">View full VirusTotal results</a>
-    </div>
-
-    <!-- INDEPENDENCE: CMM AND THE INSPIRATION VIDEO ARE NOT AFFILIATES -->
-    <div class="story-credit independent-card">
-      <p class="story-label">🔗 INDEPENDENT PROJECT</p>
-      <h3>Our product. Our development.</h3>
-      <p>Monitor Buddy is an independent CStrikerDJ project. The development, testing, design, maintenance, and product decisions behind Monitor Buddy are our own.</p>
-      <p>ControlMyMonitor, NirSoft, the inspiration video, and other referenced projects are credited for technical foundation or inspiration where applicable. They are <strong>not affiliated with, responsible for, or associated with the development of Monitor Buddy.</strong></p>
-    </div>
-  </div>
-  <p class="story-final"><strong>Someone showed us the direction. We decided to turn it into something people could actually use — and to keep it free.</strong></p>
-</section>
-
-<!-- ==================== SUPPORT ==================== -->
-<section id="support" class="support"><p class="eyebrow">NEED HELP?</p><h2>We've got you covered.</h2><div class="support-grid"><a href="https://discord.cstrikerdj.in"><b>💬 Discord</b><span>Ask questions, get setup help, and talk with the community.</span></a><div><b>🎥 YouTube</b><span>The official how-to video is coming soon. Once published, it will be linked here.</span></div><a href="https://github.com/rs3166252/MonitorBuddy/issues"><b>🐛 GitHub Issues</b><span>Found a reproducible bug? Report it here with useful system details.</span></a></div></section>
+<!-- ==================== SECURITY ==================== -->
+<section id="security" class="security section-pad"><div class="security-card reveal"><div class="security-icon">✓</div><div><p class="eyebrow">RELEASE SECURITY</p><h2>Transparent about what we publish.</h2><p>The public <strong>MonitorBuddy-App.zip</strong> release was checked with VirusTotal and received <strong>0 / 64 detections</strong> at the time of analysis.</p><a class="button secondary" href="https://www.virustotal.com/gui/file/8cfab64e6480f855f83a78f480902a9d2b9f030c6606b47297ee3ba5d3dfae34/detection">View VirusTotal Results</a></div><div class="hash"><span>SHA-256</span><code>8cfab64e6480f855f83a78f480902a9d2b9f030c6606b47297ee3ba5d3dfae34</code></div></div></section>
 
 <!-- ==================== DOWNLOAD ==================== -->
-<section id="download" class="download"><div><img src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"><div><p class="eyebrow">READY TO TRY IT?</p><h2>Give your monitor a shortcut.</h2><p>Download the latest stable release from GitHub and run the included application. No traditional installer required.</p></div></div><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">Download Monitor Buddy</a></section>
+<section id="download" class="download section-pad reveal"><div class="download-inner"><div class="download-logo"><img src="assets/MonitorBuddy.svg" alt="Monitor Buddy logo"></div><div><p class="eyebrow">READY TO TAKE CONTROL?</p><h2>Download Monitor Buddy <span>v1.1.0</span></h2><p>Portable. No traditional installer. Just download, extract, and run.</p><div class="download-tags"><span>◉ 100% Free</span><span>◉ No Ads</span><span>◉ No Tracking</span><span>◉ Works Offline</span></div></div><div class="download-action"><a class="button primary" href="https://github.com/rs3166252/MonitorBuddy/releases">↓ Download Latest (v1.1.0)</a><small>MonitorBuddy-App.zip</small><a href="https://github.com/rs3166252/MonitorBuddy/releases">View all releases on GitHub →</a></div></div></section>
+
+<!-- ==================== CREDITS ==================== -->
+<section class="credits section-pad"><div class="credit reveal"><b>🛡 VirusTotal 0/64</b><small>Scan Results</small></div><div class="credit reveal delay-1"><b>◉ SHA-256</b><small>Exact release hash</small></div><div class="credit reveal delay-2"><b>♙ Independent Project</b><small>By CStrikerDJ</small></div><div class="credit reveal delay-3"><b>♡ Inspired By</b><small>ControlMyMonitor (NirSoft)</small></div><div class="credit reveal delay-4"><b>▤ License</b><small>CMM License</small></div></section>
+
+<!-- ==================== SUPPORT ==================== -->
+<section class="support section-pad"><div class="section-heading reveal"><p class="eyebrow">NEED HELP?</p><h2>We've got you covered.</h2></div><div class="support-grid"><a href="https://discord.cstrikerdj.in" class="support-card reveal"><b>💬 Discord</b><span>Ask questions and get setup help.</span></a><div class="support-card reveal delay-1"><b>🎥 YouTube</b><span>The official how-to video is coming soon.</span></div><a href="https://github.com/rs3166252/MonitorBuddy/issues" class="support-card reveal delay-2"><b>🐛 GitHub Issues</b><span>Report reproducible bugs with useful details.</span></a></div></section>
 </main>
 
+<!-- ==================== STORY DETAIL PANEL ==================== -->
+<div class="story-modal" id="storyModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="storyModalTitle"><div class="modal-backdrop" data-close></div><article class="modal-card"><button class="modal-close" data-close aria-label="Close">×</button><div class="modal-kicker" id="storyModalKicker"></div><h2 id="storyModalTitle"></h2><div id="storyModalBody"></div></article></div>
+
 <!-- ==================== FOOTER ==================== -->
-<footer><span class="footer-brand"><img src="assets/MonitorBuddy.svg" alt=""> <b>Monitor Buddy</b></span><span>Windows • DDC/CI</span><span><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a> · <a href="https://discord.cstrikerdj.in">Discord</a></span></footer>
+<footer><div class="footer-brand"><img src="assets/MonitorBuddy.svg" alt=""><span>© 2026 CStrikerDJ. Monitor Buddy is an independent project.</span></div><div><a href="https://github.com/rs3166252/MonitorBuddy">GitHub</a> · <a href="https://github.com/rs3166252/MonitorBuddy/releases">Releases</a> · <a href="https://discord.cstrikerdj.in">Community</a></div></footer>
+
+<script>
+/* ==================== INTERACTION LAYER ====================
+   Story cards open a detail panel, the hero monitor cycles through
+   example inputs, and sections reveal smoothly while scrolling. */
+const stories={
+ powershell:{kicker:'CHAPTER 01 · THE FIRST EXPERIMENT',title:'PowerShell Days',body:'<p>The project began with the simplest useful idea: could Windows send a command to the monitor and change its input?</p><p>PowerShell let us test that idea quickly. It was not the final product, but it proved that the problem could be attacked with software instead of another piece of hardware.</p><div class="modal-quote">The first goal was not to build a product. It was simply to make the switch happen.</div>'},
+ python:{kicker:'CHAPTER 02 · EXPERIMENTATION',title:'Python Experiments',body:'<p>Once the basic concept worked, we explored Python to make the workflow more flexible and easier to reason about.</p><p>We tested monitor discovery, commands, input values, and different ways of turning manual steps into a repeatable workflow.</p><div class="modal-quote">Build → test → break → investigate → fix.</div>'},
+ csharp:{kicker:'CHAPTER 03 · BECOMING AN APP',title:'C# & Early Builds',body:'<p>The project then moved toward a proper Windows application. C# gave us a better path for packaging the experience into something people could actually run and use.</p><p>This was the point where Monitor Buddy stopped feeling like a collection of experiments and started becoming a real application.</p><div class="modal-quote">Making the feature work was only part of the job. Making it usable mattered too.</div>'},
+ security:{kicker:'CHAPTER 04 · REBUILD',title:'From a Flagged Experiment to a Release We Could Stand Behind',body:'<p>One early script-based version worked, but some security tools flagged that approach. We treated that as a reason to improve the release rather than something to hide.</p><p>We rebuilt, tested, investigated, and cleaned up the application until we had a proper portable build we were comfortable publishing.</p><div class="modal-stat"><b>0 / 64</b><span>VirusTotal detections on the public release at the time of analysis.</span></div>'},
+ release:{kicker:'CHAPTER 05 · TODAY',title:'Monitor Buddy v1.1.0',body:'<p>The result is the public v1.1.0 Actual App: portable, straightforward to run, built around monitor identification and DDC/CI control, with startup support and a simple workflow.</p><p>No traditional installer is required. Download the ZIP, extract it, and run the application.</p><div class="modal-quote">Built because we needed it. Shared because someone else might need it too. ❤️</div>'}
+};
+const modal=document.getElementById('storyModal'),modalKicker=document.getElementById('storyModalKicker'),modalTitle=document.getElementById('storyModalTitle'),modalBody=document.getElementById('storyModalBody');
+function openStory(key){const s=stories[key];if(!s)return;modalKicker.textContent=s.kicker;modalTitle.textContent=s.title;modalBody.innerHTML=s.body;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}
+function closeStory(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');}
+document.querySelectorAll('.story-node').forEach(n=>n.addEventListener('click',()=>openStory(n.dataset.story)));document.querySelectorAll('[data-close]').forEach(el=>el.addEventListener('click',closeStory));document.addEventListener('keydown',e=>{if(e.key==='Escape')closeStory();});
+const heroInputs=['HDMI 1','HDMI 2','DP 1','DP 2'];let hi=0;setInterval(()=>{hi=(hi+1)%heroInputs.length;const el=document.getElementById('heroInput');if(!el)return;el.classList.add('swap');setTimeout(()=>{el.textContent=heroInputs[hi];el.classList.remove('swap');},220);},2400);
+const observer=('IntersectionObserver' in window)?new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target);}}),{threshold:.12}):null;document.querySelectorAll('.reveal').forEach(el=>{if(observer)observer.observe(el);else el.classList.add('visible');});
+</script>
 </body>
 </html>

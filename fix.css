@@ -7,7 +7,7 @@
 .credits{padding-top:0!important}
 .faq{padding-bottom:42px!important}
 
-/* TRUST STRIP — reference layout: large icon on LEFT, text on RIGHT */
+/* TRUST STRIP — exact composition: icon LEFT, value + description stacked RIGHT */
 .trust-strip{
   min-height:118px!important;
   padding:0 10px!important;
@@ -19,35 +19,57 @@
   background:linear-gradient(180deg,#08131bdd,#071018ee)!important;
   box-shadow:inset 0 1px 0 #ffffff05,0 18px 45px #0005!important;
 }
+
 .trust-strip div{
   min-height:116px!important;
-  display:flex!important;
-  flex-direction:row!important;
+  display:grid!important;
+  grid-template-columns:58px minmax(0,1fr)!important;
+  grid-template-rows:auto auto!important;
+  column-gap:15px!important;
+  align-content:center!important;
   align-items:center!important;
   justify-content:center!important;
-  gap:15px!important;
   padding:10px 18px!important;
   text-align:left!important;
   border-right:1px solid #172631!important;
 }
 .trust-strip div:last-child{border-right:0!important}
+
+/* Icon occupies both text rows */
 .trust-strip img.asset-icon{
   width:58px!important;height:58px!important;
   min-width:58px!important;min-height:58px!important;
-  flex:0 0 58px!important;
-  display:block!important;margin:0!important;
+  grid-column:1!important;
+  grid-row:1 / 3!important;
+  display:block!important;
+  margin:0!important;
   object-fit:contain!important;
 }
+
+/* Value and description MUST stack, never sit on one line */
 .trust-strip div b{
-  display:block!important;margin:0!important;
-  font-size:20px!important;line-height:1.05!important;
-  letter-spacing:-.02em!important;white-space:nowrap!important;
+  grid-column:2!important;
+  grid-row:1!important;
+  display:block!important;
+  align-self:end!important;
+  margin:0!important;
+  font-size:20px!important;
+  line-height:1.05!important;
+  letter-spacing:-.02em!important;
+  white-space:nowrap!important;
 }
 .trust-strip div span{
-  display:block!important;margin-top:5px!important;
-  color:#91a1aa!important;font-size:11px!important;
-  line-height:1.2!important;white-space:nowrap!important;
+  grid-column:2!important;
+  grid-row:2!important;
+  display:block!important;
+  align-self:start!important;
+  margin:4px 0 0!important;
+  color:#91a1aa!important;
+  font-size:11px!important;
+  line-height:1.2!important;
+  white-space:nowrap!important;
 }
+
 .trust-strip div:nth-child(1) b{color:var(--green)!important}
 .trust-strip div:nth-child(2) b{color:var(--cyan)!important}
 .trust-strip div:nth-child(3) b{color:#20a8ff!important}
@@ -58,23 +80,36 @@
   .section-pad{padding-top:26px!important;padding-bottom:26px!important}
   .section-heading{margin-bottom:20px!important}
   .trust-strip{min-height:104px!important;padding:0 5px!important}
-  .trust-strip div{min-height:102px!important;gap:10px!important;padding:8px!important}
-  .trust-strip img.asset-icon{width:44px!important;height:44px!important;min-width:44px!important;min-height:44px!important;flex-basis:44px!important}
+  .trust-strip div{
+    min-height:102px!important;
+    grid-template-columns:44px minmax(0,1fr)!important;
+    column-gap:10px!important;
+    padding:8px!important;
+  }
+  .trust-strip img.asset-icon{
+    width:44px!important;height:44px!important;
+    min-width:44px!important;min-height:44px!important;
+  }
   .trust-strip div b{font-size:16px!important}
   .trust-strip div span{font-size:9px!important}
 }
+
 @media(max-width:700px){
   .trust-strip{grid-template-columns:1fr 1fr!important}
   .trust-strip div{border-right:1px solid #172631!important}
   .trust-strip div:nth-child(2n){border-right:0!important}
   .trust-strip div:last-child{grid-column:1/-1;border-right:0!important}
 }
+
 @media(max-width:520px){
   .section-pad{padding-top:22px!important;padding-bottom:22px!important}
   .trust-strip{grid-template-columns:1fr!important}
   .trust-strip div,.trust-strip div:nth-child(2n),.trust-strip div:last-child{
-    min-height:82px!important;grid-column:auto!important;border-right:0!important;
-    border-bottom:1px solid #172631!important;justify-content:flex-start!important;
+    min-height:82px!important;
+    grid-column:auto!important;
+    border-right:0!important;
+    border-bottom:1px solid #172631!important;
+    justify-content:start!important;
     padding:10px 20px!important;
   }
   .trust-strip div:last-child{border-bottom:0!important}

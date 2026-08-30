@@ -1,21 +1,143 @@
-/* Monitor Buddy v1.2.1 visual safety layer */
-/* Load the real base theme through a CSS-served CDN. */
+/* Monitor Buddy — final layout correction */
+/* Keep the real base theme loaded first, then apply the compact reference layout. */
 @import url("https://cdn.jsdelivr.net/gh/rs3166252/MonitorBuddyWebsite@ef106be1c103fd9a67d4111242e5aefc37f11fe0/style.css");
 
-.hero > *, .hero-visual, .hero-copy { min-width:0; }
-.hero-visual { width:100%; max-width:100%; overflow:hidden; isolation:isolate; }
-.hero-visual::before { content:none !important; display:none !important; }
-.hero-visual::after { pointer-events:none; z-index:-1; }
-.hero-visual > .hero-art { display:block !important; position:relative !important; inset:auto !important; width:min(100%,900px) !important; max-width:100% !important; height:auto !important; min-width:0 !important; margin:0 auto !important; object-fit:contain !important; }
-.asset-icon { display:block; max-width:100%; }
-.step-icon .asset-icon { width:38px; height:38px; }
-.feature-card b .asset-icon { width:30px; height:30px; flex:0 0 30px; }
-.story-node .node-icon .asset-icon { width:100%; height:100%; }
-.story-art-svg { width:190px; height:190px; max-width:100%; object-fit:contain; display:block; }
+:root{--max:870px}
+
+html,body{width:100%;overflow-x:hidden}
+body{font-size:12px}
+
+/* Header — compact, centered like the reference */
+.nav{height:68px;padding:0 max(18px,calc((100% - var(--max))/2));gap:16px}
+.brand{min-width:190px;gap:8px}
+.brand img{width:38px;height:38px}
+.brand b{font-size:13px}
+.brand small{font-size:8px}
+.nav nav{gap:22px;font-size:10px}
+.nav nav a{padding:25px 0}
+.nav nav a:after{bottom:17px}
+.nav-download{padding:8px 12px;border-radius:8px;font-size:10px}
+.nav-download-mobile,.nav-toggle{display:none!important}
+
+/* Hero — reduce the oversized spacing and typography */
+.hero{max-width:var(--max);min-height:390px;padding:38px 0 24px;grid-template-columns:1fr 1.02fr;gap:18px}
+.eyebrow{font-size:8px;margin-bottom:7px}
+.release-pill{padding:5px 8px;font-size:8px}
+.hero h1{font-size:clamp(39px,4.2vw,50px);line-height:.94;margin:12px 0 14px;letter-spacing:-.055em}
+.lead{font-size:12px;line-height:1.55;max-width:430px}
+.hero-chips{margin:15px 0;gap:6px}
+.hero-chips span{padding:6px 8px;font-size:8px;border-radius:7px}
+.actions{margin-top:16px;gap:8px}
+.button{padding:9px 12px;border-radius:8px;font-size:9px}
+.security-note{font-size:8px;margin-top:11px}
+
+.hero-visual{height:330px}
+.hero-visual > .hero-art{width:min(100%,520px)!important}
+.monitor{width:min(390px,82%)}
+.monitor-screen{height:215px;border-radius:10px}
+.monitor-screen strong{font-size:34px}
+.monitor-screen small{font-size:9px}
+.monitor-screen label{font-size:7px;margin-top:15px}
+.monitor-arrows{font-size:19px;gap:15px}
+.monitor-stand{width:55px;height:46px}
+.monitor-base{width:135px;height:8px}
+.keyboard{width:250px;height:29px}
+.monitor-glow{width:300px;height:190px}
+.input-node{padding:7px 9px;font-size:8px;border-radius:7px}
+.orbit-a{width:215px;height:110px}
+.orbit-b{width:270px;height:135px}
+.orbit-c{width:330px;height:175px}
+
+/* Trust strip — the previous version allowed the icon artwork to explode in size. */
+.trust-strip{max-width:var(--max);margin:0 auto 18px;padding:10px 8px;border-radius:10px;grid-template-columns:repeat(5,1fr)}
+.trust-strip div{min-width:0;height:55px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.trust-strip div:before{content:"";display:block!important;width:28px!important;height:28px!important;min-width:28px!important;min-height:28px!important;margin:0 auto 2px!important;background-size:contain!important;background-repeat:no-repeat!important;background-position:center!important}
+.trust-strip div img,.trust-strip div svg{width:28px!important;height:28px!important;max-width:28px!important;max-height:28px!important;object-fit:contain!important}
+.trust-strip b{font-size:13px!important;line-height:1.1}
+.trust-strip span{font-size:7px!important;margin-top:2px}
+
+/* Sections — tighter vertical rhythm */
+.section-pad{padding:48px max(18px,calc((100% - var(--max))/2))}
+.section-heading{margin-bottom:28px}
+.section-heading h2{font-size:31px}
+.section-heading>p:last-child{font-size:11px}
+
+/* How it works */
+.how-grid{grid-template-columns:1fr 22px 1fr 22px 1fr 22px 1fr}
+.how-card{min-height:150px;padding:15px;border-radius:10px}
+.how-card h3{font-size:12px;margin:5px 0}
+.how-card p{font-size:9px;line-height:1.45}
+.how-card small{font-size:7px;margin-top:12px}
+.step-icon{width:34px;height:34px;border-radius:9px;font-size:15px}
+.step-icon .asset-icon{width:28px!important;height:28px!important}
+.flow-line{height:1px}
+.flow-line i{width:5px;height:5px;top:-2px}
+
+/* Feature cards */
+.feature-grid{gap:8px}
+.feature-card{padding:15px;border-radius:9px}
+.feature-card b{font-size:11px!important;gap:5px}
+.feature-card b:before{width:23px;height:23px}
+.feature-card p{font-size:9px}
+.feature-card b .asset-icon{width:23px;height:23px;flex-basis:23px}
+
+/* Demo section */
+.demo{gap:35px}
+.demo-copy h2{font-size:31px}
+.demo-copy>p:not(.eyebrow){font-size:11px}
+.demo-shortcut{margin-top:16px;gap:5px}
+.demo-shortcut kbd{padding:6px 7px;font-size:8px}
+.demo-shortcut span{font-size:17px;margin:0 4px}
+.demo-shortcut strong{font-size:12px}
+.console-body{padding:20px;font-size:10px}
+
+/* Story timeline */
+.timeline{gap:8px}
+.story-node{min-height:150px!important;height:150px!important;padding:12px 8px 9px!important;border-radius:10px}
+.story-node .node-icon{width:38px!important;height:38px!important;min-height:38px!important;margin:0 auto 7px!important}
+.story-node b{font-size:9px!important}
+.story-node small{font-size:7px!important}
+.story-node i{font-size:6px!important;margin-top:5px!important}
+.timeline:before{top:35px!important}
+
+/* Preserve the asset sizing fixes */
+.hero > *, .hero-visual, .hero-copy{min-width:0}
+.hero-visual{width:100%;max-width:100%;overflow:hidden;isolation:isolate}
+.hero-visual::before{content:none!important;display:none!important}
+.hero-visual::after{pointer-events:none;z-index:-1}
+.asset-icon{display:block;max-width:100%}
+.story-node .node-icon .asset-icon{width:100%;height:100%}
+.story-art-svg{width:150px;height:150px;max-width:100%;object-fit:contain;display:block}
+
 @media(max-width:900px){
-  .hero { grid-template-columns:1fr !important; }
-  .hero-copy { text-align:center; }
-  .hero-copy .lead { margin-left:auto; margin-right:auto; }
-  .hero-chips,.actions { justify-content:center; }
-  .hero-visual { height:auto; min-height:420px; }
+  :root{--max:calc(100% - 28px)}
+  .nav{height:64px;padding:0 14px}
+  .brand{min-width:0}
+  .nav nav{display:none}
+  .nav-download{margin-left:auto}
+  .nav-toggle{display:flex!important;margin-left:4px}
+  .hero{grid-template-columns:1fr;min-height:auto;padding:32px 0 18px;gap:8px}
+  .hero-copy{text-align:center}
+  .hero-copy .lead{margin-left:auto;margin-right:auto}
+  .hero-chips,.actions{justify-content:center}
+  .hero-visual{height:300px}
+  .trust-strip{grid-template-columns:repeat(5,1fr);overflow:hidden}
+  .trust-strip div{height:62px}
+  .trust-strip b{font-size:10px!important}
+  .trust-strip span{font-size:6px!important}
+  .how-grid{grid-template-columns:1fr;gap:8px}
+  .flow-line{display:none}
+  .feature-grid{grid-template-columns:repeat(2,1fr)}
+  .demo{grid-template-columns:1fr;gap:25px}
+  .timeline{grid-template-columns:1fr}
+  .timeline:before{display:none}
+}
+
+@media(max-width:520px){
+  .hero h1{font-size:39px}
+  .trust-strip{padding:7px 4px}
+  .trust-strip div:before{width:22px!important;height:22px!important;min-width:22px!important;min-height:22px!important}
+  .trust-strip div img,.trust-strip div svg{width:22px!important;height:22px!important}
+  .trust-strip b{font-size:8px!important}
+  .trust-strip span{font-size:5px!important}
 }

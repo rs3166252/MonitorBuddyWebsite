@@ -1,41 +1,76 @@
-/* Monitor Buddy — spacing pass only
-   Visual sizing/layout is handled by style.css.
-   This file only controls the vertical rhythm between sections. */
+/* Monitor Buddy — spacing + trust strip refinement
+   Keeps the existing visual design intact. */
 
-/* Keep the hero and trust strip close together. */
 .trust-strip{margin-bottom:0!important}
 
-/* Compact section-to-section rhythm. */
-.section-pad{
-  padding-top:30px!important;
-  padding-bottom:30px!important;
-}
-
-/* Headings should not create a large empty block before their content. */
+.section-pad{padding-top:30px!important;padding-bottom:30px!important}
 .section-heading{margin-bottom:24px!important}
-
-/* Keep the story/detail and similar internal blocks tight. */
 .story-detail{margin-top:18px!important}
 .story-hint{margin-top:9px!important}
-
-/* Credits already has no top padding; keep its relationship with download clean. */
 .credits{padding-top:0!important}
-
-/* Footer shouldn't feel detached from FAQ. */
 .faq{padding-bottom:42px!important}
 
-/* Preserve comfortable spacing on smaller screens without returning to the old gaps. */
+/* TRUST STRIP — larger icon on the left, larger text on the right. */
+.trust-strip div{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:13px!important;
+  min-height:72px!important;
+  padding:6px 14px!important;
+  text-align:left!important;
+}
+
+.trust-strip img{
+  width:42px!important;
+  height:42px!important;
+  flex:0 0 42px!important;
+  margin:0!important;
+}
+
+.trust-strip div b{
+  display:block!important;
+  margin:0!important;
+  font-size:18px!important;
+  line-height:1.1!important;
+  white-space:nowrap!important;
+}
+
+.trust-strip div span{
+  display:block!important;
+  margin-top:4px!important;
+  font-size:9px!important;
+  line-height:1.25!important;
+  white-space:nowrap!important;
+}
+
 @media(max-width:950px){
-  .section-pad{
-    padding-top:26px!important;
-    padding-bottom:26px!important;
-  }
+  .section-pad{padding-top:26px!important;padding-bottom:26px!important}
   .section-heading{margin-bottom:20px!important}
+  .trust-strip div{gap:9px!important;padding:6px 9px!important}
+  .trust-strip img{width:36px!important;height:36px!important;flex-basis:36px!important}
+  .trust-strip div b{font-size:15px!important}
+  .trust-strip div span{font-size:8px!important}
+}
+
+@media(max-width:700px){
+  .trust-strip{grid-template-columns:1fr 1fr!important}
+  .trust-strip div{border-right:1px solid #172631!important}
+  .trust-strip div:nth-child(2n){border-right:0!important}
+  .trust-strip div:last-child{grid-column:1/-1;border-right:0!important}
 }
 
 @media(max-width:520px){
-  .section-pad{
-    padding-top:22px!important;
-    padding-bottom:22px!important;
+  .section-pad{padding-top:22px!important;padding-bottom:22px!important}
+  .trust-strip{grid-template-columns:1fr!important}
+  .trust-strip div,
+  .trust-strip div:nth-child(2n),
+  .trust-strip div:last-child{
+    grid-column:auto;
+    border-right:0!important;
+    border-bottom:1px solid #172631!important;
+    justify-content:flex-start!important;
+    padding-left:20px!important;
   }
+  .trust-strip div:last-child{border-bottom:0!important}
 }

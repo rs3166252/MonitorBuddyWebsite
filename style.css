@@ -1,4 +1,4 @@
-@import url("https://raw.githubusercontent.com/rs3166252/MonitorBuddyWebsite/51a0d030e73040788c720a67d136cfb20f12660b/style.css");
+@import url("https://raw.githubusercontent.com/rs3166252/MonitorBuddyWebsite/ef106be1c103fd9a67d4111242e5aefc37f11fe0/style.css");
 
 /* Monitor Buddy v1.2 visual asset layer */
 .hero-visual>*{display:none!important}.hero-visual:before{content:"";position:absolute;inset:4% 0 2%;background:url("assets/hero-monitor.svg") center/contain no-repeat;animation:mbHeroFloat 6s ease-in-out infinite;filter:drop-shadow(0 0 30px #20c7ff14)}.hero-visual:after{content:"";position:absolute;inset:12% 4% 8%;z-index:-1;border-radius:50%;background:radial-gradient(circle,#8cff0018,transparent 58%);filter:blur(30px);animation:mbAura 4s ease-in-out infinite}

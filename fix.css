@@ -1,2 +1,41 @@
-/* Monitor Buddy — layout overrides intentionally removed.
-   The site now uses the self-contained style.css. */
+/* Monitor Buddy — spacing pass only
+   Visual sizing/layout is handled by style.css.
+   This file only controls the vertical rhythm between sections. */
+
+/* Keep the hero and trust strip close together. */
+.trust-strip{margin-bottom:0!important}
+
+/* Compact section-to-section rhythm. */
+.section-pad{
+  padding-top:30px!important;
+  padding-bottom:30px!important;
+}
+
+/* Headings should not create a large empty block before their content. */
+.section-heading{margin-bottom:24px!important}
+
+/* Keep the story/detail and similar internal blocks tight. */
+.story-detail{margin-top:18px!important}
+.story-hint{margin-top:9px!important}
+
+/* Credits already has no top padding; keep its relationship with download clean. */
+.credits{padding-top:0!important}
+
+/* Footer shouldn't feel detached from FAQ. */
+.faq{padding-bottom:42px!important}
+
+/* Preserve comfortable spacing on smaller screens without returning to the old gaps. */
+@media(max-width:950px){
+  .section-pad{
+    padding-top:26px!important;
+    padding-bottom:26px!important;
+  }
+  .section-heading{margin-bottom:20px!important}
+}
+
+@media(max-width:520px){
+  .section-pad{
+    padding-top:22px!important;
+    padding-bottom:22px!important;
+  }
+}

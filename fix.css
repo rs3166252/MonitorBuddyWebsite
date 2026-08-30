@@ -1,4 +1,7 @@
 /* Monitor Buddy v1.2.1 visual safety layer */
+/* Load the real base theme through a CSS-served CDN. */
+@import url("https://cdn.jsdelivr.net/gh/rs3166252/MonitorBuddyWebsite@ef106be1c103fd9a67d4111242e5aefc37f11fe0/style.css");
+
 .hero > *, .hero-visual, .hero-copy { min-width:0; }
 .hero-visual { width:100%; max-width:100%; overflow:hidden; isolation:isolate; }
 .hero-visual::before { content:none !important; display:none !important; }
